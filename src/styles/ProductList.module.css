@@ -1,0 +1,12 @@
+.product-list__container {
+    padding: 20px;
+}
+
+.product-list__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: space-between;
+    max-width: calc(4 * 336px + 3 * 48px);
+    margin: 0 auto;
+}

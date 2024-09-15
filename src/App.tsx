@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styles from "./App.module.css";
+import ProductList from "./components/ProductList";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <div className={styles.app__breadcrumbs}>
+        <span className={styles.breadcrumbs__item}>Главная</span>
+        <span className={styles.breadcrumbs__separator}>/</span>
+        <span className={styles.breadcrumbs__item}>Системы хранения</span>
+        <span className={styles.breadcrumbs__separator}>/</span>
+        <span className={styles.breadcrumbs__item__bold}>
+          Комплекты стеллажных систем
+        </span>
+      </div>
+      <div className={styles.app__title__container}>
+        <h1 className={styles.app__title}>Комплекты стеллажных систем</h1>
+      </div>
+
+      <ProductList />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,23 @@
+.filter-sort-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-sort-bar__select {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-sort-bar__select select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.filter-sort-bar__select option {
+    font-size: 16px;
+}

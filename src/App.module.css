@@ -1,0 +1,36 @@
+.app {
+  padding: 20px;
+}
+
+.app__title {
+  font-size: 36px;
+  color: black;
+  font-weight: 600;
+  font-weight: bold;
+  margin-top: 32px;
+  margin-left: 216px;
+}
+
+.app__breadcrumbs {
+
+  margin-bottom: 20px;
+  margin-left: 216px;
+  margin-top: 32px;
+}
+
+.breadcrumbs__item {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #828282;
+}
+
+.breadcrumbs__item__bold {
+  margin-right: 10px;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+}
+
+.breadcrumbs__separator {
+  margin-right: 10px;
+}

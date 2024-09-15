@@ -1,0 +1,90 @@
+.item-card {
+    width: 336px;
+    height: 352px;
+    left: 216px;
+    top: 265px;
+    border: 1px solid #EEEEEE;
+
+}
+
+.item-card__image {
+    position: static;
+    width: 238px;
+    height: 237px;
+    left: calc(50% - 238px/2);
+    top: 9px;
+    background: url(../../public/pictures/pic1.png), #FFFFFF;
+}
+
+.item-card__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.item-card__name {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.item-card__code {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.item-card__material {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.item-card__price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.item-card__old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.item-card__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-card__icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
+}
+
+.item-card__discount {
+    width: 81px;
+    height: 24px;
+    left: 0px;
+    top: 8px;
+    background: #EB5757;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.item-card__discount-label {
+
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+
+
+}
