@@ -13,12 +13,12 @@ const FilterSortBar: React.FC<FilterSortBarProps> = ({
   return (
     <div className={styles["filter-sort-bar"]}>
       <div className={styles["filter-sort-bar-item-container"]}>
-        <div className={styles["filter-sort-bar-item"]}>
+        <div className={styles["filter-sort-bar-item-label-container"]}>
           <label className={styles["filter-sort-bar-item-label"]}>
             Сортировать по:
           </label>
         </div>
-        <div className={styles["filter-sort-bar-item"]}>
+        <div className={styles["filter-sort-bar-option-container"]}>
           {" "}
           <select
             onChange={(e) => onSortChange(e.target.value)}
@@ -40,11 +40,11 @@ const FilterSortBar: React.FC<FilterSortBarProps> = ({
         </div>
       </div>
       <div className={styles["filter-sort-bar-item-container-2"]}>
-        <div className={styles["filter-sort-bar-item"]}>
+        <div className={styles["filter-sort-bar-item-label-container"]}>
           {" "}
           <label className={styles["filter-sort-bar-item-label"]}>Металл</label>
         </div>
-        <div className={styles["filter-sort-bar-item"]}>
+        <div className={styles["filter-sort-bar-option-container"]}>
           {" "}
           <select
             onChange={(e) => onFilterChange(e.target.value)}

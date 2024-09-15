@@ -1,6 +1,4 @@
-.product-list__container {
-    padding: 20px;
-}
+.product-list__container {}
 
 .product-list__items {
     display: flex;
