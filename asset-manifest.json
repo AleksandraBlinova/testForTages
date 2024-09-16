@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/testForTages/static/css/main.13156d1c.css",
+    "main.js": "/testForTages/static/js/main.6d3bdf8a.js",
+    "static/js/453.5f7012fc.chunk.js": "/testForTages/static/js/453.5f7012fc.chunk.js",
+    "static/media/pic1.png": "/testForTages/static/media/pic1.b4c5d18d230b13225dea.png",
+    "index.html": "/testForTages/index.html",
+    "main.13156d1c.css.map": "/testForTages/static/css/main.13156d1c.css.map",
+    "main.6d3bdf8a.js.map": "/testForTages/static/js/main.6d3bdf8a.js.map",
+    "453.5f7012fc.chunk.js.map": "/testForTages/static/js/453.5f7012fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13156d1c.css",
+    "static/js/main.6d3bdf8a.js"
+  ]
+}
