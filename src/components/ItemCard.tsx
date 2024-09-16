@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import styles from "../styles/ItemCard.module.css";
 
@@ -23,6 +23,64 @@ const ItemCard: React.FC<ItemCardProps> = ({
   material,
   isDiscounted,
 }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [isInCart, setIsInCart] = useState(false);
+
+  useEffect(() => {
+    const favorites = localStorage.getItem("favorites");
+    const cart = localStorage.getItem("cart");
+
+    if (favorites && favorites.includes(id)) {
+      setIsFavorite(true);
+    }
+
+    if (cart && cart.includes(id)) {
+      setIsInCart(true);
+    }
+  }, [id]);
+
+  const handleFavoriteClick = () => {
+    const favorites = localStorage.getItem("favorites");
+
+    if (favorites) {
+      const favoritesArray = favorites.split(",");
+      if (favoritesArray.includes(id)) {
+        const index = favoritesArray.indexOf(id);
+        favoritesArray.splice(index, 1);
+        localStorage.setItem("favorites", favoritesArray.join(","));
+        setIsFavorite(false);
+      } else {
+        favoritesArray.push(id);
+        localStorage.setItem("favorites", favoritesArray.join(","));
+        setIsFavorite(true);
+      }
+    } else {
+      localStorage.setItem("favorites", id);
+      setIsFavorite(true);
+    }
+  };
+
+  const handleCartClick = () => {
+    const cart = localStorage.getItem("cart");
+
+    if (cart) {
+      const cartArray = cart.split(",");
+      if (cartArray.includes(id)) {
+        const index = cartArray.indexOf(id);
+        cartArray.splice(index, 1);
+        localStorage.setItem("cart", cartArray.join(","));
+        setIsInCart(false);
+      } else {
+        cartArray.push(id);
+        localStorage.setItem("cart", cartArray.join(","));
+        setIsInCart(true);
+      }
+    } else {
+      localStorage.setItem("cart", id);
+      setIsInCart(true);
+    }
+  };
+
   return (
     <div className={styles["item-card"]}>
       {isDiscounted ? (
@@ -50,43 +108,24 @@ const ItemCard: React.FC<ItemCardProps> = ({
             {currentPrice} ₽
           </span>
           <div className={styles["item-card__icons"]}>
-            {id == "1" && (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-shopping-cart"
-                style={{ marginRight: "10px" }}
-              >
-                <circle cx="8" cy="21" r="1" />
-                <circle cx="19" cy="21" r="1" />
-                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-              </svg>
-            )}
-            {id == "5" && (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#27ae60"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check"
-                style={{ marginRight: "10px" }}
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            )}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-shopping-cart"
+              style={{ marginRight: "10px" }}
+              onClick={handleCartClick}
+            >
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+            </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -98,9 +137,10 @@ const ItemCard: React.FC<ItemCardProps> = ({
               strokeLinecap="round"
               strokeLinejoin="round"
               className="lucide lucide-heart"
+              onClick={handleFavoriteClick}
             >
               <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-            </svg>{" "}
+            </svg>
           </div>
         </div>
       </div>
