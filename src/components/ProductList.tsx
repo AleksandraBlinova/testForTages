@@ -58,6 +58,7 @@ const ProductList: React.FC = () => {
         {filteredItems.map((item: Item) => (
           <ItemCard
             key={item.id}
+            id={item.id}
             name={item.name}
             code={item.code}
             oldPrice={item.price.old_price}

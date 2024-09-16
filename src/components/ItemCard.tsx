@@ -3,6 +3,7 @@ import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import styles from "../styles/ItemCard.module.css";
 
 type ItemCardProps = {
+  id: string;
   name: string;
   code: string | null;
   oldPrice: number | null;
@@ -13,6 +14,7 @@ type ItemCardProps = {
 };
 
 const ItemCard: React.FC<ItemCardProps> = ({
+  id,
   name,
   code,
   oldPrice,
@@ -48,23 +50,43 @@ const ItemCard: React.FC<ItemCardProps> = ({
             {currentPrice} ₽
           </span>
           <div className={styles["item-card__icons"]}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-shopping-cart"
-              style={{ marginRight: "10px" }}
-            >
-              <circle cx="8" cy="21" r="1" />
-              <circle cx="19" cy="21" r="1" />
-              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-            </svg>{" "}
+            {id == "1" && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-shopping-cart"
+                style={{ marginRight: "10px" }}
+              >
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+              </svg>
+            )}
+            {id == "5" && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#27ae60"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-circle-check"
+                style={{ marginRight: "10px" }}
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
