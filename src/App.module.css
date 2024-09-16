@@ -112,8 +112,12 @@
   .app__breadcrumbs {
     margin: 32px 16px;
     height: 16px;
-    width: 525px;
     font-family: 'SF Pro Display', sans-serif;
+    width: 425px;
+  }
+
+  .breadcrumbs__item__bold {
+    display: block;
   }
 }
 
@@ -121,7 +125,29 @@
   .app__breadcrumbs {
     margin: 32px 16px;
     height: 16px;
-    width: 525px;
     font-family: 'SF Pro Display', sans-serif;
+    width: 325px;
+  }
+
+  .breadcrumbs__item__bold {
+    display: block;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+  .app__breadcrumbs {
+    height: 16px;
+    font-family: 'SF Pro Display', sans-serif;
+    width: 250px;
+
+  }
+
+  .breadcrumbs__item__bold {
+    display: block;
+
+  }
+
+  .app__title {
+    margin-top: 60px;
   }
 }
