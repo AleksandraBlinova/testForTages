@@ -1,90 +1,116 @@
+@import url(https://myfonts.ru/myfonts?fonts=sf-ui-text);
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .item-card {
     width: 336px;
     height: 352px;
-    left: 216px;
-    top: 265px;
     border: 1px solid #EEEEEE;
-
+    font-family: 'SF UI Text', arial;
 }
 
 .item-card__image {
-    position: static;
     width: 238px;
     height: 237px;
-    left: calc(50% - 238px/2);
-    top: 9px;
     background: url(../../public/pictures/pic1.png), #FFFFFF;
+    display: block;
+    margin: 0 auto;
 }
 
-.item-card__details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-}
 
 .item-card__name {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'SF UI Text', arial;
+    padding-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 8px;
 }
 
 .item-card__code {
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 10px;
+    font-size: 10px;
+    color: #888888;
+    font-family: 'SF UI Text', arial;
+    padding-left: 12px;
+    margin: 0px;
+}
+
+.item-card__no__code {
+    font-size: 10px;
+    color: #fff;
+    font-family: 'SF UI Text', arial;
+    padding-left: 12px;
+    margin: 0px;
 }
 
 .item-card__material {
     font-size: 14px;
     color: #888;
-    margin-bottom: 15px;
+    font-family: 'SF UI Text', arial;
 }
 
-.item-card__price {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
+
+.item-card__icons {
+    display: inline-block;
+    float: inline-end;
+    margin-right: 12px;
+    padding-right: 12px;
+}
+
+
+
+.item-card__current-price {
+    color: #000;
+    margin-right: 0px;
+    font-family: 'SF UI Text', arial;
+    padding-left: 12px;
+    margin-top: 6px;
 }
 
 .item-card__old-price {
     text-decoration: line-through;
     color: #999;
-    margin-right: 10px;
-}
-
-.item-card__actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-right: 0px;
+    font-family: 'SF UI Text', arial;
+    padding-left: 12px;
 }
 
 .item-card__icon {
     cursor: pointer;
-    font-size: 24px;
-    color: #888;
+    font-size: 18px;
+    color: #000;
+    border: #000;
 }
 
 .item-card__discount {
     width: 81px;
     height: 24px;
-    left: 0px;
-    top: 8px;
     background: #EB5757;
     margin-top: 8px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    font-family: 'SF Pro Display', sans-serif;
+
+}
+
+.item-card__no__discount {
+    width: 81px;
+    height: 24px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'SF Pro Display', sans-serif;
+
 }
 
 .item-card__discount-label {
-
-    font-family: sans-serif;
+    padding-left: 12px;
+    font-family: 'SF UI Text', arial;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
     letter-spacing: 0.01em;
     color: #FFFFFF;
-
-
 }
